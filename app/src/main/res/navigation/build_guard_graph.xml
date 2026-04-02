@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/build_guard_graph"
+    app:startDestination="@id/buildGuardLoadFragment">
+
+    <fragment
+        android:id="@+id/buildGuardLoadFragment"
+        android:name="com.buildfgu.guardbiu.grfvd.presentation.ui.load.BuildGuardLoadFragment"
+        android:label="BuildGuardLoadFragment" >
+        <action
+            android:id="@+id/action_buildGuardLoadFragment_to_buildGuardV"
+            app:destination="@id/buildGuardV"
+            app:popUpTo="@id/build_guard_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/buildGuardV"
+        android:name="com.buildfgu.guardbiu.grfvd.presentation.ui.view.BuildGuardV"
+        android:label="BuildGuardV" />
+</navigation>

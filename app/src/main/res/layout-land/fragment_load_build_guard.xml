@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/buildGuardBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/build_guard_land_back" />
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/buildGuardLoadingGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="buildGuardProgress, buildGuardProgressText" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/buildGuardStateGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:constraint_referenced_ids="buildGuardConnectionState" />
+
+    <ImageView
+        android:id="@+id/buildGuardProgressText"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/buildGuardProgress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/build_guard_loadi" />
+
+    <ProgressBar
+        android:id="@+id/buildGuardProgress"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:indeterminateTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.62" />
+
+
+    <ImageView
+        android:id="@+id/buildGuardConnectionState"
+        android:layout_width="0dp"
+        android:layout_height="285dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47000003"
+        app:srcCompat="@drawable/build_guard_state" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/buildGuardNotiGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="buildGuardNotifText,buildGuardGrandButton,buildGuardSkipButton,buildGuardNotifText2,buildGuardNotiBack" />
+
+    <ImageView
+        android:id="@+id/buildGuardNotiBack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/buildGuardBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/build_guard_land" />
+
+
+    <TextView
+        android:id="@+id/buildGuardNotifText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/bagel_fat_one"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Allow notifications about bonuses and promos"
+        android:textColor="@color/white"
+        android:textSize="31sp"
+        app:layout_constraintBottom_toTopOf="@+id/buildGuardNotifText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lineHeight="35dp" />
+
+    <Button
+        android:id="@+id/buildGuardGrandButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/build_guard_btn"
+        android:fontFamily="@font/bagel_fat_one"
+        android:text="Yes, I Want Bonuses!"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/buildGuardSkipButton"
+        app:layout_constraintEnd_toEndOf="@+id/buildGuardNotifText"
+        app:layout_constraintStart_toStartOf="@+id/buildGuardNotifText" />
+
+    <TextView
+        android:id="@+id/buildGuardSkipButton"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/bagel_fat_one"
+        android:gravity="center"
+        android:shadowColor="@color/white"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Skip"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buildGuardGrandButton"
+        app:layout_constraintStart_toStartOf="@+id/buildGuardGrandButton" />
+
+
+    <TextView
+        android:id="@+id/buildGuardNotifText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="61dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/bagel_fat_one"
+        android:gravity="center"
+        android:letterSpacing="0"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Stay tuned with best offers from our casino"
+        android:textColor="#BEFFFFFF"
+
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/buildGuardGrandButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lineHeight="35dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

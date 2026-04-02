@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "977653363748",
+    "project_id": "buildguard-44492",
+    "storage_bucket": "buildguard-44492.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977653363748:android:4dd20c32a7ac28213d14b1",
+        "android_client_info": {
+          "package_name": "com.buildfgu.guardbiu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFLgFSb3NrJeM0fdtzGBCi0H25Iwauv64"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
